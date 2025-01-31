@@ -1,87 +1,43 @@
 <template>
-    <nav class="bg-gray-800">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <!-- Mobile menu button -->
-          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:ring-inset">
-              <span class="sr-only">Open main menu</span>
-              <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-              <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
-  
-          <!-- Logo -->
-          <div class="flex  justify-between items-center sm:items-stretch sm:justify-between ">
-            <div class="flex  items-center">
-                <i class="material-icons pr-1 items-center w-auto text-white">
-                    library_books
-                </i>
-                <span class="font-extrabold text-white">Blog Ease</span>
-            </div>
-            <!-- Desktop Navigation -->
-            <div class="hidden sm:ml-6 sm:block flex-end">
-              <div class="flex space-x-4">
-                <a v-for="item in navigation" :key="item.name" :href="item.href" 
-                  :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']">
-                  {{ item.name }}
-                </a>
-              </div>
-            </div>
-          </div>
-  
-          <!-- Right Side: Notifications & Profile -->
-          <!-- <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2">
-              <i class="material-icons w-10 font-bold h6">add</i>
-            </button>
-  
-            <div class="relative ml-3">
-              <button @click="profileMenuOpen = !profileMenuOpen" class="flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2">
-                <span class="sr-only">Open user menu</span>
-                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-              </button>
-  
-              <div v-if="profileMenuOpen" class="absolute right-0 z-10 mt-2 w-48 bg-white shadow-lg ring-1 ring-black ring-opacity-5 rounded-md py-1">
-                <nuxt-link to="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</nuxt-link>
-                <nuxt-link to="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</nuxt-link>
-                <nuxt-link to="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</nuxt-link>
-              </div>
-            </div>
-          </div> -->
-        </div>
+  <div>
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div class="flex  items-center">
+          <i size={48} class="material-icons pr-1 items-center w-auto text-white">
+              library_books
+          </i>
+          <span class="font-extrabold text-white text-2xl whitespace-nowrap">Blog Ease</span>
       </div>
-  
-      <!-- Mobile Navigation -->
-      <div v-if="mobileMenuOpen" class="sm:hidden">
-        <div class="space-y-1 px-2 pt-2 pb-3">
-          <a v-for="item in navigation" :key="item.name" :href="item.href"
-            :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium']">
-            {{ item.name }}
-          </a>
-        </div>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <PrimaryButton to="/aUTH/signin" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</PrimaryButton>
+          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <nuxt-link to="/" class="block text-xl py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link  to="/" class="block text-xl py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</nuxt-link>
+          </li>
+        </ul>
+      </div>
       </div>
     </nav>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue'
-  
-  const mobileMenuOpen = ref(false)
-  const profileMenuOpen = ref(false)
-  
-  const navigation = [
-    { name: 'Home', href: '#', current: true },
-    { name: 'About', href: '#', current: false },
-    { name: 'Servicces', href: '#', current: false },
-  ]
+  </div>
+</template>
 
-  defineProps([
-    'nav'
-  ])
-  </script>
-  
+<script setup>
+ defineProps([
+  'nav'
+ ])
+
+</script>
+
+   
+              
