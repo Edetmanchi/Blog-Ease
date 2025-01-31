@@ -78,7 +78,7 @@
 
 
   <template>
-    <div class="my-8">
+    <div class="mt-20">
       <form @submit.prevent="addPost">
         <div class="max-w-3xl my-15 mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
           <div>
@@ -121,7 +121,7 @@
             </div>
           </div>
           <!-- Submit Button -->
-          <SecondaryButton type="submit" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600">Submit</SecondaryButton>
+          <button type="submit" class=" w-full mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600">Submit</button>
         </div>
       </form>
     </div>
@@ -140,10 +140,13 @@
       image.value = URL.createObjectURL(file); 
     }
   };
+
+  const { data: existingBlogs } = await useFetch('http://localhost:8000/blogs');
+  const nextId = existingBlogs.value.length + 1;
   
   const addPost = async () => {
     const newPost = {
-      id: Date.now(), // Generate a unique ID
+      id: nextId, // Generate a unique ID
       name: name.value,
       date: new Date().toISOString().split('T')[0], // Current date
       description: title.value,
@@ -156,6 +159,7 @@
       method: 'POST',
       body: JSON.stringify(newPost),
     });
+
   
     navigateTo('/blogs'); 
   };
