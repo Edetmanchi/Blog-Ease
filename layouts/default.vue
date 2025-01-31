@@ -1,9 +1,10 @@
 <template>
     <div>
-        <header>
-            <Nav :nav="nav"/>
+        <header class=" flex flex-row shadow-sm bg-white">
+            <Nav :showLogo="true" :showNavLinks="true" :showProfileDropdown="false" :showGetStarted="true" :showAddPost="false"  />
         </header>
-        <div>
+    
+        <div class="container mx-auto p-4">
             <slot/>
         </div>
         

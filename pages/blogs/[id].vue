@@ -14,6 +14,7 @@
 <script setup>
     definePageMeta({
         layout: "blogs",
+        // middleware: ['auth']
     })
 
 
@@ -29,21 +30,5 @@
         }
 
 
-
-
-
-
-
-
-
-
-    // const { id } = useRoute().params
-    //     // fetching singular data
-    // const uri = 'http://localhost:8000/blogs/' + id
-
-    // const {data: blog} = await useFetch(uri, {key:id})
-    // if(!blog.value){
-    //     throw createError({statusCode: 404, statusMessage: 'Page not found'})
-    // }
     
 </script>

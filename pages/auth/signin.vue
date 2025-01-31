@@ -11,7 +11,7 @@
     </div>
 
     <div class="mt-5 sm:mx-auto sm:w-full sm:max-w-sm">
-      <form class="space-y-6" @submit.prevent="login">
+      <form class="space-y-6" @submit.prevent="signup">
         <div>
           <label for="name" class="block text-sm/6 font-medium text-gray-900">Name</label>
           <div class="mt-2">
@@ -45,18 +45,67 @@
   </div>
 </template>
 
+<!-- 
+
+<script setup>
+const name = ref('');
+const email = ref('');
+const password = ref('');
+
+const signup = async () => {
+  try {
+    // Make an API call to your JSON server (port 8000) to register the user
+    const response = await $fetch('http://localhost:8000/users', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: name.value,
+        email: email.value,
+        password: password.value,
+      }),
+    });
+
+    // Automatically log the user in after sign-up
+    const userStore = useUserStore();
+    userStore.setUser({ name: name.value, email: email.value });
+
+    // Set a cookie for authentication
+    const userCookie = useCookie('user');
+    userCookie.value = { name: name.value, email: email.value };
+
+    // Redirect to the blogs page
+    navigateTo('/blogs');
+  } catch (error) {
+    console.error('Sign-up error:', error);
+    alert('Sign-up failed. Please try again.');
+  }
+};
+</script> -->
+
 
 
 <script setup>
-  const name = ref('');
-  const email = ref('');
-  const password = ref('');
+const name = ref('');
+const email = ref('');
+const password = ref('');
 
-  const login = () => {
-    // Simulate signup
-    useStore().commit('setUser', { name: name.value, email: email.value });
-    navigateTo('/blogs'); 
-  };
+const signup = async () => {
+  try {
+    const response = await $fetch('http://localhost:8000/users', {
+      method: 'POST',
+      body: {
+        name: name.value,
+        email: email.value,
+        password: password.value,
+      },
+    });
+
+    console.log('User signed up:', response);
+    navigateTo('/blogs');
+  } catch (error) {
+    console.error('Signup failed:', error);
+    alert('Sign-up failed. Please try again.');
+  }
+};
 </script>
 
 

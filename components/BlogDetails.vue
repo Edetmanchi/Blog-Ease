@@ -1,39 +1,3 @@
-<!-- <template>
-    <div class="justify-center item-center px-15">
-        <h1 class="font-extrabold text-4xl text-center py-6">{{ blog.description }}</h1>
-        <div class=" items-stretch">
-            <img class="h-120 w-full" :src="blog.image" :alt="blog.category">
-        </div>
-        <div class="mx-10 mt-12">
-            <div class="flex items-start gap-10 ">
-                <span class="text-slate-600 text-xl uppercase">posted by: {{ blog.name }}</span>
-                <div class="flex gap-2 items-center text-xl ">
-                    <i class="material-icons w-">calendar_month</i>
-                    <span>{{ blog.date }}</span>
-                </div>
-                <span class="category text-xl font-semibold">{{ blog.category }}</span>
-            </div>
-            <div class="">
-                <p class="py-5 text-2xl">{{  blog.body}}</p>
-            </div>
-        </div>
-
-    </div>
-</template>
-
-<script setup>
-const{ blog} = defineProps([
-    'blog'
-])
-
-</script>
-
-<style  scoped>
-
-</style> -->
-
-
-
 
 <template>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

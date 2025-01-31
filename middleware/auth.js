@@ -1,5 +1,8 @@
-export default function ({ store, redirect }) {
-    if (!store.state.user) {
-      return redirect('/login');
+export default defineNuxtRouteMiddleware((to, from)=> {
+  const auth = useCookie('user')
+
+    if(!auth.value){
+      return navigateTo('/auth/signin')
     }
-  }
+  
+})

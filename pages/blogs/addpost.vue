@@ -128,6 +128,13 @@
   </template>
   
   <script setup>
+  definePageMeta({
+        layout: 'blogs',
+        // middleware: ['auth']
+    })
+
+
+
   const name = ref('');
   const title = ref('');
   const category = ref('');
