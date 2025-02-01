@@ -1,76 +1,12 @@
-# Nuxt Minimal Starter
+Blog Ease
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple blog application built with Nuxt.js 3 and JSON Server as a mock API. This project demonstrates basic features like user signup, blog viewing, and logout functionality.
 
-## Setup
+Features
 
-Make sure to install dependencies:
+- User Signup: Users can sign up with their name, email, and password.
+- Blog Viewing: Users can view a list of blogs with details like title, description, and category.
+- Add/ Post Blog: User can publish thier blog on the website 
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-"# Blog-App" 
+NOTE 
+This app was build with a json MOCK server. Make sure you have Node install and run the command npx json-server data/db.json --port 8000 to watch the server  
