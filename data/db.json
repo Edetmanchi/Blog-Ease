@@ -1,6 +1,107 @@
 {
   "users": [
-  
+    {
+      "id": "b1a7",
+      "name": "Edet Effiong",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is great"
+    },
+    {
+      "id": "e7c9",
+      "name": "Edet Effiong",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is great"
+    },
+    {
+      "id": "a033",
+      "name": "Edet Effiong",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is great"
+    },
+    {
+      "id": "8273",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "78ae",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "e1cb",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "a7b0",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "4b97",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "d1d7",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "3d96",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "7d7b",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "bd8e",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "ddd5",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "1f44",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "a355",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "2c8e",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    },
+    {
+      "id": "cecf",
+      "name": "NOU211189037",
+      "email": "edeteffiong321@gmail.com",
+      "password": "this is greate"
+    }
   ],
   "blogs": [
     {
