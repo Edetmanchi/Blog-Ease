@@ -21,7 +21,7 @@
 <script setup>
     definePageMeta({
         layout: 'blogs',
-        middleware: ['auth']
+        // middleware: ['auth']
     })
 
     // fetching data

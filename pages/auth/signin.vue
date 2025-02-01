@@ -45,41 +45,6 @@
   </div>
 </template>
 
-<!-- 
-
-<script setup>
-const name = ref('');
-const email = ref('');
-const password = ref('');
-
-const signup = async () => {
-  try {
-    // Make an API call to your JSON server (port 8000) to register the user
-    const response = await $fetch('http://localhost:8000/users', {
-      method: 'POST',
-      body: JSON.stringify({
-        name: name.value,
-        email: email.value,
-        password: password.value,
-      }),
-    });
-
-    // Automatically log the user in after sign-up
-    const userStore = useUserStore();
-    userStore.setUser({ name: name.value, email: email.value });
-
-    // Set a cookie for authentication
-    const userCookie = useCookie('user');
-    userCookie.value = { name: name.value, email: email.value };
-
-    // Redirect to the blogs page
-    navigateTo('/blogs');
-  } catch (error) {
-    console.error('Sign-up error:', error);
-    alert('Sign-up failed. Please try again.');
-  }
-};
-</script> -->
 
 
 
