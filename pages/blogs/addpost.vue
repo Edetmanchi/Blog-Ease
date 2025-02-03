@@ -52,7 +52,7 @@
   <script setup>
   definePageMeta({
         layout: 'blogs',
-        // middleware: ['auth']
+        middleware: ['auth']
     })
 
 
@@ -77,11 +77,11 @@
     const newPost = {
       id: nextId, // Generate a unique ID
       name: name.value,
-      date: new Date().toISOString().split('T')[0], // Current date
+      date: new Date().toISOString().split('T')[0],
       description: title.value,
       body: body.value,
       category: category.value,
-      image: image.value || '/images/default.jpg', // Default image if none is uploaded
+      image: image.value || '/images/default.jpg',
     };
   
     await $fetch('http://localhost:8000/blogs', {
