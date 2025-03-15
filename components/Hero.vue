@@ -47,5 +47,4 @@
 </template>
 
 <script setup>
-// defineProps(["hero"]);
 </script>

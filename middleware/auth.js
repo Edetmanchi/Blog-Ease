@@ -1,4 +1,4 @@
-export default defineNuxtRouteMiddleware((to, from)=> {
+export default defineNuxtRouteMiddleware((to, from, next)=> {
   const auth = useCookie('user')
 
     if(!auth.value){
